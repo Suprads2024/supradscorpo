@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="../support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recibimos tu consulta | Suprads</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#060B18">
+<link rel="icon" type="image/png" sizes="48x48" href="../assets/favicon-48.png">
+<style>
+@font-face{font-family:'Sora';font-weight:500 800;font-display:swap;src:url(../assets/fonts/sora-latin.woff2) format('woff2')}
+@font-face{font-family:'Manrope';font-weight:400 800;font-display:swap;src:url(../assets/fonts/manrope-latin.woff2) format('woff2')}
+body{margin:0;background:#060B18}
+a{color:#7FA6FF;text-decoration:none}
+a:hover{color:#AEC6FF}
+</style>
+</helmet>
+<div style="min-height:100vh;display:grid;place-items:center;padding:40px clamp(16px,3vw,28px);font-family:'Manrope',system-ui,sans-serif;color:#E9EEFB;background:radial-gradient(55% 45% at 50% 0%,rgba(47,107,255,.26),transparent 70%),#060B18">
+  <main style="max-width:600px;text-align:center">
+    <a href="../" aria-label="Suprads, ir al inicio" style="display:inline-block"><img src="../assets/logo-wordmark-white.png" alt="Suprads" width="134" height="22" style="height:22px;width:auto;display:block"></a>
+    <span aria-hidden="true" style="display:grid;place-items:center;width:64px;height:64px;margin:40px auto 0;border-radius:50%;background:linear-gradient(135deg,#6A5BFF,#256BFF);box-shadow:0 0 50px rgba(70,90,255,.5)"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>
+    <h1 style="margin:24px 0 0;font-family:'Sora',sans-serif;font-weight:700;letter-spacing:-.03em;font-size:clamp(30px,4vw,46px);line-height:1.1">Recibimos tu consulta.</h1>
+    <p style="margin:16px 0 0;font-size:17px;line-height:1.6;color:#C6D5F2">Vamos a revisar la información y te contactamos para conversar el próximo paso.</p>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:30px">
+      <a href="https://calendly.com/contact-suprads/30min" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;padding:15px 22px;border-radius:10px;background:linear-gradient(135deg,#6A5BFF,#256BFF);color:#fff;font-weight:700" style-hover="color:#fff">Reservar una llamada ↗</a>
+      <a href="../" style="display:inline-flex;align-items:center;padding:15px 22px;border-radius:10px;border:1px solid rgba(174,198,255,.28);color:#E9EEFB;font-weight:700" style-hover="color:#fff">Volver al inicio</a>
+    </div>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    // Evento de conversión solo si llegó desde un envío real (evita contar recargas o visitas directas)
+    let id = null;
+    try { id = sessionStorage.getItem('sup_lead_ok'); sessionStorage.removeItem('sup_lead_ok'); } catch (e) {}
+    if (!id) return;
+    const origen = new URLSearchParams(location.search).get('origen') || '';
+    const p = { event: 'lead_thank_you', lead_id: id, origen };
+    if (typeof window.gtag === 'function') window.gtag('event', 'lead_thank_you', p);
+    else { window.dataLayer = window.dataLayer || []; window.dataLayer.push(p); }
+  }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

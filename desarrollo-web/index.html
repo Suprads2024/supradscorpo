@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="../support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Desarrollo web profesional para empresas | Suprads</title>
+<meta name="description" content="Diseñamos y desarrollamos webs corporativas, rediseños, WordPress y WooCommerce y desarrollos a medida, pensados para generar consultas. Propuesta con alcance detallado.">
+<link rel="canonical" href="https://suprads.com/desarrollo-web/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Suprads">
+<meta property="og:url" content="https://suprads.com/desarrollo-web/">
+<meta property="og:title" content="Desarrollo web profesional para empresas | Suprads">
+<meta property="og:description" content="Webs corporativas pensadas para presentar tu oferta y generar consultas.">
+<meta property="og:image" content="https://suprads.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#060B18">
+<link rel="icon" type="image/png" sizes="48x48" href="../assets/favicon-48.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+<link rel="preload" href="../assets/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Sora';font-style:normal;font-weight:500 800;font-display:swap;src:url(../assets/fonts/sora-latin.woff2) format('woff2')}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:400 800;font-display:swap;src:url(../assets/fonts/manrope-latin.woff2) format('woff2')}
+@font-face{font-family:'Sora Fallback';src:local('Arial');size-adjust:112%;ascent-override:90%;descent-override:24%;line-gap-override:0%}
+@font-face{font-family:'Manrope Fallback';src:local('Arial');size-adjust:103%;ascent-override:104%;descent-override:29%;line-gap-override:0%}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:#060B18;overflow-x:clip}
+a{color:#7FA6FF;text-decoration:none}
+a:hover{color:#AEC6FF}
+a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid #7FA6FF;outline-offset:3px;border-radius:8px}
+input,textarea,button{font-family:inherit}
+input::placeholder,textarea::placeholder{color:#64748F}
+summary::-webkit-details-marker{display:none}
+details[open] [data-chev]{transform:rotate(180deg)}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.16,.8,.24,1),transform .9s cubic-bezier(.16,.8,.24,1)}
+.rv[data-rv="zoom"]{transform:translateY(56px) scale(.94)}
+.rv[data-rv="left"]{transform:translateX(-48px)}
+.rv[data-rv="right"]{transform:translateX(48px)}
+.rv.in{opacity:1;transform:none}
+.rv[data-rv-d="1"]{transition-delay:.1s}.rv[data-rv-d="2"]{transition-delay:.2s}
+@media (max-width:880px){[data-nav-anchors]{display:none!important}}
+@media (min-width:900px){[data-sticky]{position:sticky;top:110px}}
+@media (max-width:1000px){[data-g3]{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media (max-width:640px){[data-g3]{grid-template-columns:minmax(0,1fr)!important}}
+@media (max-width:560px){[data-nav-cta]{padding:10px 13px!important;font-size:13px!important}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1!important;transform:none!important}}
+</style>
+</helmet>
+
+<div id="top" style="font-family:'Manrope','Manrope Fallback',system-ui,sans-serif;background:#060B18;color:#E9EEFB;-webkit-font-smoothing:antialiased;overflow-x:clip">
+
+  <a href="#contenido" style="position:absolute;left:-9999px;top:8px;z-index:1000;padding:10px 14px;border-radius:10px;background:#E9EEFB;color:#060B18;font-weight:700" style-focus="left:12px">Saltar al contenido</a>
+
+  <header style="position:sticky;top:0;z-index:900;background:rgba(6,11,24,.78);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(140,170,255,.10)">
+    <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px clamp(16px,3vw,28px)">
+      <a href="../" aria-label="Suprads, ir al inicio" style="display:flex;align-items:center"><img src="../assets/logo-wordmark-white.png" alt="Suprads" width="134" height="22" style="height:22px;width:auto;display:block"></a>
+      <nav aria-label="Secciones" data-nav-anchors="1" style="display:flex;align-items:center;gap:clamp(16px,2.4vw,34px);font-size:14.5px">
+        <a href="#servicios" style="color:#AFBDD8" style-hover="color:#fff">Servicios</a>
+        <a href="#proyectos" style="color:#AFBDD8" style-hover="color:#fff">Proyectos</a>
+        <a href="#proceso" style="color:#AFBDD8" style-hover="color:#fff">Proceso</a>
+        <a href="#faq" style="color:#AFBDD8" style-hover="color:#fff">Preguntas</a>
+      </nav>
+      <a href="#presupuesto" data-nav-cta="1" onClick="{{ ctaHeader }}" style="display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:10px;border:1px solid rgba(127,166,255,.35);background:rgba(16,28,60,.7);color:#fff;font-size:14px;font-weight:700;white-space:nowrap" style-hover="border-color:rgba(174,198,255,.7);color:#fff">Pedir presupuesto <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+  <!-- HERO -->
+  <section style="position:relative;overflow:hidden;padding:clamp(28px,7vh,96px) clamp(16px,3vw,28px) clamp(36px,7vh,80px);background:radial-gradient(60% 55% at 50% 0%,rgba(47,107,255,.30),transparent 70%),radial-gradient(40% 40% at 90% 60%,rgba(106,91,255,.16),transparent 70%)">
+    <div aria-hidden="true" style="position:absolute;inset:0;background-image:linear-gradient(rgba(140,170,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(140,170,255,.06) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(70% 60% at 50% 30%,#000,transparent);mask-image:radial-gradient(70% 60% at 50% 30%,#000,transparent);pointer-events:none"></div>
+    <div style="position:relative;max-width:1000px;margin:0 auto;text-align:center">
+      <span style="display:inline-flex;align-items:center;gap:8px;padding:7px 16px 7px 8px;border-radius:999px;border:1px solid rgba(127,166,255,.32);background:rgba(37,107,255,.10);box-shadow:0 0 28px rgba(92,147,255,.18);font-size:13.5px;font-weight:700;color:#D6E0F5;white-space:nowrap;max-width:100%"><span style="display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:rgba(92,147,255,.24)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#AEC6FF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"></path></svg></span>Desarrollo web para empresas</span>
+      <h1 style="margin:clamp(16px,3vw,26px) 0 0;font-family:'Sora','Sora Fallback',sans-serif;font-weight:700;font-size:clamp(38px,5.6vw,76px);line-height:1.04;letter-spacing:-.04em;text-wrap:balance">Desarrollo web profesional <span style="background:linear-gradient(90deg,#7FA6FF 0%,#8B7CFF 50%,#AEC6FF 100%);-webkit-background-clip:text;background-clip:text;color:transparent">para empresas que venden.</span></h1>
+      <p style="margin:22px auto 0;max-width:680px;font-size:clamp(16px,1.35vw,19px);line-height:1.6;color:#C6D5F2;text-wrap:pretty">Diseñamos y desarrollamos webs corporativas que explican tu oferta, transmiten confianza y facilitan que te pidan presupuesto.</p>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:30px">
+        <a href="#presupuesto" onClick="{{ ctaHero }}" style="white-space:nowrap;display:inline-flex;align-items:center;gap:8px;padding:15px 24px;border-radius:10px;background:linear-gradient(135deg,#6A5BFF,#256BFF);color:#fff;font-size:15.5px;font-weight:700;box-shadow:0 14px 40px rgba(70,90,255,.4)" style-hover="color:#fff;box-shadow:0 18px 50px rgba(70,90,255,.55)">Pedir presupuesto <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+        <a href="#proyectos" style="white-space:nowrap;display:inline-flex;align-items:center;gap:8px;padding:15px 22px;border-radius:10px;border:1px solid rgba(174,198,255,.28);background:rgba(10,18,38,.6);color:#E9EEFB;font-size:15.5px;font-weight:700" style-hover="border-color:rgba(174,198,255,.6);color:#fff">Ver proyectos</a>
+      </div>
+      <p style="margin:18px 0 0;font-size:13.5px;line-height:1.55;color:#93A2C0">Propuesta con alcance, etapas y costos detallados antes de empezar.</p>
+    </div>
+
+    <div data-rv="zoom" style="position:relative;max-width:1000px;margin:clamp(28px,5vh,56px) auto 0">
+      <div aria-hidden="true" style="position:absolute;inset:-6% 8% 20%;border-radius:50%;background:radial-gradient(closest-side,rgba(70,100,255,.35),transparent);filter:blur(40px);pointer-events:none"></div>
+      <div style="position:relative;border-radius:22px;padding:10px;border:1px solid rgba(127,166,255,.3);background:linear-gradient(180deg,rgba(24,40,86,.6),rgba(8,14,30,.85));box-shadow:0 0 60px rgba(47,107,255,.22),0 40px 90px rgba(0,0,0,.5)">
+        <div style="display:flex;align-items:center;gap:12px;padding:6px 10px 12px">
+          <div style="display:flex;gap:6px" aria-hidden="true"><span style="width:10px;height:10px;border-radius:50%;background:#1E2B4D"></span><span style="width:10px;height:10px;border-radius:50%;background:#1E2B4D"></span><span style="width:10px;height:10px;border-radius:50%;background:#1E2B4D"></span></div>
+          <div style="flex:1;max-width:340px;margin:0 auto;padding:6px 14px;border-radius:999px;background:#060B18;border:1px solid rgba(140,170,255,.14);font-size:12px;color:#93A2C0;text-align:center">tuempresa.com.ar</div>
+          <span style="font-size:11.5px;font-weight:700;color:#93A2C0;white-space:nowrap">Arrastrá ↔</span>
+        </div>
+        <div data-ba="1" role="group" aria-label="Comparación: web institucional y web orientada a consultas" style="position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;touch-action:pan-y;user-select:none;-webkit-user-select:none;cursor:ew-resize;background:#E8EBF1">
+          <div aria-hidden="true" style="position:absolute;inset:0;display:flex;flex-direction:column;padding:4% 6% 4.5%;background:radial-gradient(60% 60% at 100% 0%,#E4EAF7,transparent 70%),#F7F8FB;font-family:'Manrope','Manrope Fallback',sans-serif;color:#1E2638;overflow:hidden">
+            <div style="flex:none;display:flex;justify-content:space-between;align-items:center;gap:10px;padding-right:15%">
+              <span style="display:flex;align-items:center;gap:7px;font-weight:800;font-size:clamp(9px,1.1vw,14px);letter-spacing:.02em"><span style="width:clamp(12px,1.5vw,18px);height:clamp(12px,1.5vw,18px);border-radius:5px;background:linear-gradient(135deg,#9AA7BF,#5B6B8C)"></span>empresa</span>
+              <span style="display:flex;gap:4px;padding:3px;border-radius:999px;background:#fff;border:1px solid #E3E7EF;font-size:clamp(7px,0.8vw,11px);font-weight:600;color:#5B6B8C"><span style="padding:4px 10px;border-radius:999px;background:#1E2638;color:#fff">Inicio</span><span style="padding:4px 8px">Nosotros</span><span style="padding:4px 8px">Historia</span><span style="padding:4px 8px">Galería</span><span style="padding:4px 8px">Contacto</span></span>
+            </div>
+            <div style="flex:1 1 auto;min-height:0;display:grid;grid-template-columns:1.05fr 1fr;gap:5%;align-items:center;margin-top:3%">
+              <div>
+                <span style="display:inline-block;padding:3px 9px;border-radius:999px;background:#EEF2FA;font-size:clamp(7px,0.75vw,10px);font-weight:700;letter-spacing:.12em;color:#5B6B8C">DESDE 1987</span>
+                <div style="margin-top:6%;font-family:'Sora','Sora Fallback',sans-serif;font-weight:700;font-size:clamp(13px,2.2vw,28px);line-height:1.12;letter-spacing:-.02em;color:#1E2638">Más de 30 años acompañando a la industria.</div>
+                <div style="margin-top:5%;font-size:clamp(8px,0.95vw,12px);line-height:1.55;color:#6A7488">Conocé nuestra historia, nuestros valores y el compromiso que nos define.</div>
+                <span style="display:inline-block;margin-top:7%;padding:6px 14px;border-radius:999px;border:1px solid #C9D0DD;font-size:clamp(8px,0.9vw,12px);font-weight:700;color:#1E2638">Conocé más</span>
+              </div>
+              <div style="position:relative;height:100%;max-height:100%;min-height:0;border-radius:16px;overflow:hidden;background:radial-gradient(60% 70% at 30% 30%,#DCE3F0,transparent 70%),linear-gradient(135deg,#C7D0E0,#AEB9CD);box-shadow:0 18px 40px rgba(30,45,80,.18)">
+                <span style="position:absolute;left:8%;bottom:8%;padding:6px 10px;border-radius:10px;background:rgba(255,255,255,.92);font-size:clamp(7px,0.8vw,11px);font-weight:700;color:#1E2638">Nuestra planta</span>
+              </div>
+            </div>
+            <div style="flex:none;display:grid;grid-template-columns:repeat(3,1fr);gap:3%;margin-top:3%"><div style="display:grid;gap:6px;padding:7% 8%;border-radius:12px;background:#fff;border:1px solid #E3E7EF;box-shadow:0 6px 18px rgba(30,45,80,.06)"><span style="display:grid;place-items:center;width:clamp(16px,2vw,26px);height:clamp(16px,2vw,26px);border-radius:8px;background:#EEF2FA;color:#5B6B8C"><svg width="60%" height="60%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="3"></circle></svg></span><span style="font-weight:700;font-size:clamp(8px,0.95vw,12px);color:#1E2638">Misión</span><span style="display:block;height:4px;width:85%;border-radius:2px;background:#E6EAF1"></span><span style="display:block;height:4px;width:60%;border-radius:2px;background:#E6EAF1"></span></div><div style="display:grid;gap:6px;padding:7% 8%;border-radius:12px;background:#fff;border:1px solid #E3E7EF;box-shadow:0 6px 18px rgba(30,45,80,.06)"><span style="display:grid;place-items:center;width:clamp(16px,2vw,26px);height:clamp(16px,2vw,26px);border-radius:8px;background:#EEF2FA;color:#5B6B8C"><svg width="60%" height="60%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"></path><circle cx="12" cy="12" r="3"></circle></svg></span><span style="font-weight:700;font-size:clamp(8px,0.95vw,12px);color:#1E2638">Visión</span><span style="display:block;height:4px;width:85%;border-radius:2px;background:#E6EAF1"></span><span style="display:block;height:4px;width:60%;border-radius:2px;background:#E6EAF1"></span></div><div style="display:grid;gap:6px;padding:7% 8%;border-radius:12px;background:#fff;border:1px solid #E3E7EF;box-shadow:0 6px 18px rgba(30,45,80,.06)"><span style="display:grid;place-items:center;width:clamp(16px,2vw,26px);height:clamp(16px,2vw,26px);border-radius:8px;background:#EEF2FA;color:#5B6B8C"><svg width="60%" height="60%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"></path></svg></span><span style="font-weight:700;font-size:clamp(8px,0.95vw,12px);color:#1E2638">Valores</span><span style="display:block;height:4px;width:85%;border-radius:2px;background:#E6EAF1"></span><span style="display:block;height:4px;width:60%;border-radius:2px;background:#E6EAF1"></span></div></div>
+            <div style="position:absolute;right:3%;top:4%;padding:6px 12px;border-radius:999px;background:#1E2638;color:#fff;font-size:clamp(9px,1vw,11px);font-weight:800;letter-spacing:.14em">ANTES</div>
+          </div>
+          <div data-ba-top="1" aria-hidden="true" style="position:absolute;inset:0;padding:6% 7%;background:radial-gradient(80% 70% at 90% 0%,rgba(47,107,255,.3),transparent 70%),#070E1F;clip-path:inset(0 50% 0 0)">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:clamp(9px,1vw,12px);color:#93A2C0"><span style="font-weight:800;color:#E9EEFB">tuempresa</span><span style="display:flex;gap:14px;align-items:center"><span>Soluciones</span><span>Rubros</span><span style="padding:5px 10px;border-radius:6px;background:linear-gradient(135deg,#6A5BFF,#256BFF);color:#fff;font-weight:700">Pedir presupuesto</span></span></div>
+            <div style="margin-top:6%;font-size:clamp(8px,.9vw,11px);letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:#7FA6FF">Para plantas y talleres</div>
+            <div style="margin-top:1.5%;font-family:'Sora','Sora Fallback',sans-serif;font-weight:700;font-size:clamp(15px,2.6vw,32px);line-height:1.12;color:#fff;max-width:62%">Insumos industriales con presupuesto en 24 h.</div>
+            <div style="display:flex;gap:2%;margin-top:4%"><span style="padding:1.4% 2.6%;border-radius:7px;background:linear-gradient(135deg,#6A5BFF,#256BFF);color:#fff;font-size:clamp(9px,1vw,12px);font-weight:700">Pedir presupuesto</span><span style="padding:1.4% 2.6%;border-radius:7px;border:1px solid rgba(174,198,255,.3);color:#E9EEFB;font-size:clamp(9px,1vw,12px);font-weight:700">Ver catálogo</span></div>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2.4%;margin-top:6%">
+              <span style="padding:5%;border-radius:8px;border:1px solid rgba(140,170,255,.22);background:rgba(12,22,48,.7);font-size:clamp(8px,.95vw,12px);font-weight:700;color:#D6E0F5">Qué resolvés</span>
+              <span style="padding:5%;border-radius:8px;border:1px solid rgba(140,170,255,.22);background:rgba(12,22,48,.7);font-size:clamp(8px,.95vw,12px);font-weight:700;color:#D6E0F5">Para quién</span>
+              <span style="padding:5%;border-radius:8px;border:1px solid rgba(140,170,255,.22);background:rgba(12,22,48,.7);font-size:clamp(8px,.95vw,12px);font-weight:700;color:#D6E0F5">Cómo pedirlo</span>
+            </div>
+            <div style="position:absolute;left:3%;bottom:5%;padding:6px 12px;border-radius:999px;border:1px solid rgba(127,166,255,.5);background:rgba(10,18,38,.85);color:#E9EEFB;font-size:clamp(9px,1vw,11px);font-weight:800;letter-spacing:.14em">CON SUPRADS</div>
+          </div>
+          <div data-ba-handle="1" tabindex="0" role="slider" aria-label="Mover comparación" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" style="position:absolute;top:0;bottom:0;left:50%;width:2px;transform:translateX(-1px);background:rgba(174,198,255,.9);box-shadow:0 0 18px rgba(92,147,255,.8)">
+            <span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#0A1328;border:1px solid rgba(174,198,255,.7);box-shadow:0 8px 24px rgba(0,0,0,.5);color:#fff"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"></path></svg></span>
+          </div>
+        </div>
+      </div>
+      <p style="margin:14px 0 0;text-align:center;font-size:12.5px;color:#7E8DAC">Ejemplo ilustrativo. No corresponde a un cliente real.</p>
+    </div>
+  </section>
+
+  <!-- LOGOS -->
+  <section aria-labelledby="t-logos" style="padding:clamp(20px,4vw,48px) clamp(16px,3vw,28px);border-top:1px solid rgba(140,170,255,.14)">
+    <div style="max-width:1160px;margin:0 auto">
+      <p id="t-logos" style="margin:0 0 clamp(12px,2.5vw,24px);text-align:center;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8FA3C8">Empresas que confían en Suprads</p>
+      <div style="overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 22%,#000 78%,transparent);mask-image:linear-gradient(90deg,transparent,#000 22%,#000 78%,transparent)">
+        <div data-logos-track="1" style="display:flex;gap:16px;width:max-content;cursor:grab;touch-action:pan-y;user-select:none;-webkit-user-select:none;will-change:transform">
+          <sc-for list="{{ logos }}" as="l" hint-placeholder-count="9">
+            <div data-logo="{{ l.t }}" aria-hidden="{{ l.dup }}" style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:190px;height:80px;padding:0 20px;opacity:.82;transition:opacity .3s" style-hover="opacity:1"><img src="{{ l.src }}" alt="{{ l.t }}" loading="lazy" decoding="async" draggable="false" style="display:block;width:150px;height:46px;object-fit:contain;pointer-events:none"></div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" aria-labelledby="t-serv" style="padding:clamp(32px,6vw,96px) clamp(16px,3vw,28px);border-top:1px solid rgba(140,170,255,.10)">
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="text-align:center;max-width:820px;margin:0 auto">
+        <span data-rv="1" style="display:inline-flex;align-items:center;padding:7px 16px;border-radius:999px;border:1px solid rgba(127,166,255,.32);background:rgba(37,107,255,.10);font-size:11.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#AEC6FF">Servicios</span>
+        <h2 id="t-serv" data-rv="1" data-rv-d="1" style="margin:20px 0 0;font-family:'Sora','Sora Fallback',sans-serif;font-weight:700;letter-spacing:-.035em;font-size:clamp(30px,3.8vw,52px);line-height:1.08;text-wrap:balance">Lo que desarrollamos para tu empresa.</h2>
+        <p data-rv="1" data-rv-d="2" style="margin:18px auto 0;max-width:640px;font-size:clamp(15.5px,1.2vw,17.5px);line-height:1.65;color:#AFBDD8;text-wrap:pretty">Desde una web corporativa nueva hasta integraciones con tus sistemas. Definimos juntos el alcance que tiene sentido.</p>
+      </div>
+      <div data-g3="1" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,1.8vw,22px);margin-top:clamp(22px,4vw,52px)">
+        <sc-for list="{{ services }}" as="s" hint-placeholder-count="6">
+          <article data-rv="1" data-spot="1" style="padding:28px;border-radius:20px;border:1px solid rgba(140,170,255,.16);background:radial-gradient(360px circle at var(--mx,-400px) var(--my,-400px),rgba(92,147,255,.16),transparent 60%),#0A1328">
+            <span style="display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:linear-gradient(180deg,#1A2A57,#0E1834);border:1px solid rgba(127,166,255,.3);font-family:'Sora','Sora Fallback',sans-serif;font-weight:700;font-size:15px;color:#AEC6FF">{{ s.n }}</span>
+            <h3 style="margin:20px 0 0;font-family:'Sora','Sora Fallback',sans-serif;font-weight:700;font-size:20px;letter-spacing:-.02em">{{ s.t }}</h3>
+            <p style="margin:10px 0 0;font-size:15px;line-height:1.6;color:#AFBDD8">{{ s.d }}</p>
+          </article>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos" aria-labelledby="t-proy" style="padding:clamp(32px,6vw,96px) clamp(16px,3vw,28px);border-top:1px solid rgba(140,170,255,.10);background:radial-gradient(50% 50% at 50% 50%,rgba(47,107,255,.10),transparent 70%)">
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="text-align:center;max-width:820px;margin:0 auto">
+        <span data-rv="1" style="display:inline-flex;align-items:center;padding:7px 16px;border-radius:999px;border:1px solid rgba(127,166,255,.32);background:rgba(37,107,255,.10);font-size:11.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#AEC6FF">Proyectos</span>
+        <h2 id="t-proy" data-rv="1" data-rv-d="1" style="margin:20px 0 0;font-family:'Sora','Sora Fallback',sans-serif;font-weight:700;letter-spacing:-.035em;font-size:clamp(30px,3.8vw,52px);line-height:1.08;text-wrap:balance">Webs que desarrollamos.</h2>
+      </div>
+      <div data-g3="1" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,1.8vw,22px);margin-top:clamp(22px,4vw,52px)">
+        <sc-for list="{{ projects }}" as="p" hint-placeholder-count="6">
+          <article data-rv="1" data-spot="1" style="position:relative;cursor:pointer;border-radius:20px;padding:10px;border:1px solid rgba(140,170,255,.18);background:radial-gradient(360px circle at var(--mx,-400px) var(--my,-400px),rgba(92,147,255,.14),transparent 60%),linear-gradient(180deg,rgba(24,40,86,.5),rgba(8,14,30,.8))">
+            <div style="aspect-ratio:2/1;border-radius:12px;overflow:hidden;background:#060B18;border:1px solid rgba(140,170,255,.12)"><img src="{{ p.img }}" alt="{{ p.alt }}" width="960" height="480" loading="lazy" decoding="async" style="display:block;width:100%;height:100%;object-fit:cover;object-position:left top;transition:transform .6s cubic-bezier(.2,.8,.2,1)" style-hover="transform:scale(1.04)"></div>
+            <div style="padding:16px 8px 8px">
+              <div style="font-family:'Sora','Sora Fallback',sans-serif;font-weight:700;font-size:17px;color:#E9EEFB">{{ p.n }}</div>
+              <div style="margin-top:4px;font-size:14px;color:#93A2C0">{{ p.d }}</div>
+              <span style="display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:13.5px;font-weight:700;color:#8DB0FF">Ver la web en vivo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+            </div>
+            <button type="button" onClick="{{ p.open }}" aria-label="Ver la web de {{ p.n }}" style="position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:20px;background:transparent;cursor:pointer"></button>
+          </article>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUÉ INCLUYE -->
+  <section aria-labelledby="t-inc" style="padding:clamp(32px,6vw,96px) clamp(16px,3vw,28px);border-top:1px solid rgba(140,170,255,.10)">
+    <div style="max-width:1160px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(420px,100%),1fr));gap:clamp(32px,5vw,72px);align-items:center">
+      <div data-rv="left">
+        <span style="display:inline-flex;align-items:center;padding:7px 16px;border-radius:999px;border:1px solid rgba(127,166,255,.32);background:rgba(37,107,255,.10);font-size:11.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#AEC6FF">En cada proyecto</span>
+        <h2 id="t-inc" style="margin:20px 0 0;font-family:'Sora','Sora Fallback',sans-serif;font-weight:700;letter-spacing:-.035em;font-size:clamp(30px,3.6vw,50px);line-height:1.08;text-wrap:balance">Una web pensada para recibir consultas.</h2>
+        <p style="margin:18px 0 0;font-size:16.5px;line-height:1.65;color:#AFBDD8;text-wrap:pretty">No alcanza con que se vea bien. Tiene que explicar qué hacés, cargar rápido en el celular y dejar claro cómo pedirte presupuesto.</p>
+        <p style="margin:14px 0 0;font-size:15px;line-height:1.65;color:#93A2C0">Si después querés atraer tráfico, también podemos sumar <a href="../webads/" style="font-weight:700">Google Ads y medición</a>.</p>
+      </div>
+      <ul data-rv="right" style="list-style:none;margin:0;padding:0;display:grid;gap:12px">
+        <sc-for list="{{ includes }}" as="i" hint-placeholder-count="6">
+          <li data-spot="1" style="display:flex;gap:14px;align-items:flex-start;padding:18px 22px;border-radius:16px;border:1px solid rgba(140,170,255,.16);background:radial-gradient(320px circle at var(--mx,-400px) var(--my,-400px),rgba(92,147,255,.16),transparent 60%),#0A1328;font-size:15.5px;line-height:1.55;color:#D6E0F5"><svg style="flex:none;margin-top:1px" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7FA6FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M8.5 12.5l2.5 2.5 4.5-5"></path></svg>{{ i }}</li>
+        </sc-for>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section id="proceso" aria-labelledby="t-proc" style="padding:clamp(32px,6vw,96px) clamp(16px,3vw,28px);border-top:1px solid rgba(140,170,255,.10);background:radial-gradient(50% 40% at 0% 50%,rgba(47,107,255,.10),transparent 70%)">
+    <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(380px,100%),1fr));gap:clamp(36px,6vw,88px);align-items:start">
+      <div data-sticky="1">
+        <span data-rv="1" style="display:inline-flex;align-items:center;padding:7px 16px;border-radius:999px;border:1px solid rgba(127,166,255,.32);background:rgba(37,107,255,.10);font-size:11.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#AEC6FF">Proceso</span>
+        <h2 id="t-proc" data-rv="1" data-rv-d="1" style="margin:20px 0 0;font-family:'Sora','Sora Fallback',sans-serif;font-weight:700;letter-spacing:-.035em;font-size:clamp(30px,3.6vw,50px);line-height:1.08;text-wrap:balance">Cómo trabajamos tu web.</h2>
+        <p data-rv="1" data-rv-d="2" style="margin:22px 0 0;padding:18px 20px;border-radius:14px;border:1px solid rgba(92,147,255,.32);background:rgba(37,107,255,.06);font-size:15px;line-height:1.6;color:#D6E0F5">Cada etapa tiene entregables y revisiones acordadas en la propuesta.</p>
+      </div>
+      <ol data-steps="1" style="position:relative;list-style:none;margin:0;padding:0 0 0 64px;display:grid;gap:clamp(36px,6vh,56px)">
+        <span data-steps-track="1" aria-hidden="true" style="position:absolute;left:21px;top:22px;height:0;width:2px;background:#13203F;border-radius:2px"><span data-steps-fill="1" style="display:block;width:100%;height:0;background:linear-gradient(180deg,#6A5BFF,#5C93FF);box-shadow:0 0 14px #5C93FF;border-radius:2px"></span></span>
+        <sc-for list="{{ steps }}" as="st" hint-placeholder-count="4">
+          <li data-step="1" style="position:relative">
+            <span data-step-dot="1" aria-hidden="true" style="position:absolute;left:-64px;top:0;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1px solid rgba(140,170,255,.25);background:#0B1530;color:#7FA6FF;font-family:'Sora','Sora Fallback',sans-serif;font-weight:700;font-size:15px;transition:all .45s">{{ st.n }}</span>
+            <h3 style="margin:8px 0 0;font-family:'Sora','Sora Fallback',sans-serif;font-weight:700;font-size:clamp(19px,1.7vw,23px);letter-spacing:-.02em">{{ st.t }}</h3>
+            <p style="margin:10px 0 0;font-size:16px;line-height:1.65;color:#AFBDD8">{{ st.d }}</p>
+          </li>
+        </sc-for>
+      </ol>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section aria-labelledby="t-test" style="padding:clamp(32px,6vw,96px) clamp(16px,3vw,28px);border-top:1px solid rgba(140,170,255,.10)">
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="text-align:center;max-width:820px;margin:0 auto">
+        <span data-rv="1" style="display:inline-flex;align-items:center;padding:7px 16px;border-radius:999px;border:1px solid rgba(127,166,255,.32);background:rgba(37,107,255,.10);font-size:11.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#AEC6FF">Clientes</span>
+        <h2 id="t-test" data-rv="1" data-rv-d="1" style="margin:20px 0 0;font-family:'Sora','Sora Fallback',sans-serif;font-weight:700;letter-spacing:-.035em;font-size:clamp(30px,3.8vw,52px);line-height:1.08;text-wrap:balance">Lo que dicen quienes trabajaron con nosotros.</h2>
+      </div>
+      <div data-g3="1" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,1.8vw,22px);margin-top:clamp(22px,4vw,52px)">
+        <sc-for list="{{ testimonials }}" as="t" hint-placeholder-count="3">
+          <figure data-rv="1" data-testimonial-slot="{{ t }}" style="margin:0;display:flex;flex-direction:column;gap:18px;padding:28px;border-radius:20px;border:1px dashed rgba(140,170,255,.28);background:#0A1328">
+            <span aria-hidden="true" style="font-family:'Sora','Sora Fallback',sans-serif;font-size:44px;line-height:.6;color:#3A4F86">“</span>
+            <blockquote style="margin:0;font-size:15.5px;line-height:1.65;color:#93A2C0">Testimonio pendiente. Acá va la frase real del cliente, con su autorización.</blockquote>
+            <figcaption style="display:flex;align-items:center;gap:12px;margin-top:auto">
+              <span style="width:40px;height:40px;border-radius:50%;border:1px dashed rgba(140,170,255,.3);background:rgba(6,11,24,.7)"></span>
+              <span><span style="display:block;font-weight:700;font-size:14.5px;color:#D6E0F5">Nombre y apellido</span><span style="display:block;font-size:13px;color:#7E8DAC">Cargo · Empresa</span></span>
+            </figcaption>
+          </figure>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" aria-labelledby="t-faq" style="padding:clamp(32px,6vw,96px) clamp(16px,3vw,28px);border-top:1px solid rgba(140,170,255,.10)">
+    <div style="max-width:820px;margin:0 auto">
+      <div style="text-align:center">
+        <span data-rv="1" style="display:inline-flex;align-items:center;padding:7px 16px;border-radius:999px;border:1px solid rgba(127,166,255,.32);background:rgba(37,107,255,.10);font-size:11.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#AEC6FF">Preguntas</span>
+        <h2 id="t-faq" data-rv="1" data-rv-d="1" style="margin:20px 0 0;font-family:'Sora','Sora Fallback',sans-serif;font-weight:700;letter-spacing:-.035em;font-size:clamp(30px,3.6vw,48px);line-height:1.08;text-wrap:balance">Antes de pedir tu presupuesto.</h2>
+      </div>
+      <div data-rv="1" style="display:grid;gap:12px;margin-top:clamp(32px,5vh,48px)">
+        <sc-for list="{{ faqs }}" as="q" hint-placeholder-count="7">
+          <details style="padding:0 22px;border-radius:16px;border:1px solid rgba(140,170,255,.16);background:#0A1328"><summary style="cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;font-weight:700;font-size:16px;line-height:1.4">{{ q.q }}<span data-chev="1" aria-hidden="true" style="flex:none;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;border:1px solid rgba(140,170,255,.22);color:#AEC6FF;transition:transform .25s"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary><p style="margin:0 0 20px;font-size:15.5px;line-height:1.7;color:#AFBDD8">{{ q.a }}</p></details>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESUPUESTO -->
+  <section id="presupuesto" aria-labelledby="t-pres" style="position:relative;overflow:hidden;padding:clamp(32px,6vw,96px) clamp(16px,3vw,28px);border-top:1px solid rgba(140,170,255,.10);background:radial-gradient(55% 45% at 50% 0%,rgba(47,107,255,.26),transparent 70%)">
+    <div style="max-width:900px;margin:0 auto;text-align:center">
+      <h2 id="t-pres" data-rv="1" style="margin:0;font-family:'Sora','Sora Fallback',sans-serif;font-weight:700;letter-spacing:-.035em;font-size:clamp(32px,4.2vw,58px);line-height:1.06;text-wrap:balance">Contanos qué web necesitás <span style="background:linear-gradient(90deg,#7FA6FF 0%,#8B7CFF 50%,#AEC6FF 100%);-webkit-background-clip:text;background-clip:text;color:transparent">y te armamos la propuesta.</span></h2>
+      <p data-rv="1" data-rv-d="1" style="margin:16px auto 0;max-width:600px;font-size:16.5px;line-height:1.6;color:#C6D5F2">Revisamos tu caso y te enviamos alcance, etapas y costos por escrito.</p>
+    </div>
+    <div data-rv="zoom" style="position:relative;max-width:640px;margin:clamp(36px,6vh,52px) auto 0;padding:clamp(22px,3vw,36px);border-radius:22px;border:1px solid rgba(127,166,255,.28);background:linear-gradient(180deg,rgba(18,30,70,.7),rgba(8,14,32,.92));box-shadow:0 0 70px rgba(47,107,255,.22),0 40px 90px rgba(0,0,0,.45)">
+      <form noValidate="noValidate" onSubmit="{{ onSubmit }}" onFocus="{{ onFormFocus }}" style="display:grid;gap:18px">
+        <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label>No completar<input type="text" tabindex="-1" autocomplete="off" value="{{ f.hp }}" onChange="{{ onHp }}"></label></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:18px">
+          <div style="display:grid;gap:7px">
+            <label for="f-name" style="font-size:14px;font-weight:700">Nombre <span style="font-weight:500;color:#93A2C0">(obligatorio)</span></label>
+            <input id="f-name" type="text" autocomplete="name" maxlength="120" value="{{ f.name }}" onChange="{{ onName }}" aria-invalid="{{ inv.name }}" aria-describedby="e-name" style="height:48px;padding:0 14px;border-radius:10px;border:1px solid {{ bc.name }};background:rgba(4,8,18,.6);color:#E9EEFB;font-size:16px;outline:none" style-focus="border-color:#5C93FF;box-shadow:0 0 0 3px rgba(92,147,255,.3)">
+            <sc-if value="{{ errs.name }}" hint-placeholder-val="{{ false }}"><span id="e-name" style="font-size:13.5px;color:#FFB4B4">{{ errs.name }}</span></sc-if>
+          </div>
+          <div style="display:grid;gap:7px">
+            <label for="f-company" style="font-size:14px;font-weight:700">Empresa <span style="font-weight:500;color:#93A2C0">(obligatorio)</span></label>
+            <input id="f-company" type="text" autocomplete="organization" maxlength="160" value="{{ f.company }}" onChange="{{ onCompany }}" aria-invalid="{{ inv.company }}" aria-describedby="e-company" style="height:48px;padding:0 14px;border-radius:10px;border:1px solid {{ bc.company }};background:rgba(4,8,18,.6);color:#E9EEFB;font-size:16px;outline:none" style-focus="border-color:#5C93FF;box-shadow:0 0 0 3px rgba(92,147,255,.3)">
+            <sc-if value="{{ errs.company }}" hint-placeholder-val="{{ false }}"><span id="e-company" style="font-size:13.5px;color:#FFB4B4">{{ errs.company }}</span></sc-if>
+          </div>
+        </div>
+        <div style="display:grid;gap:7px">
+          <label for="f-email" style="font-size:14px;font-weight:700">Email <span style="font-weight:500;color:#93A2C0">(obligatorio)</span></label>
+          <input id="f-email" type="email" inputMode="email" autocomplete="email" maxlength="200" value="{{ f.email }}" onChange="{{ onEmail }}" aria-invalid="{{ inv.email }}" aria-describedby="e-email" style="height:48px;padding:0 14px;border-radius:10px;border:1px solid {{ bc.email }};background:rgba(4,8,18,.6);color:#E9EEFB;font-size:16px;outline:none" style-focus="border-color:#5C93FF;box-shadow:0 0 0 3px rgba(92,147,255,.3)">
+          <sc-if value="{{ errs.email }}" hint-placeholder-val="{{ false }}"><span id="e-email" style="font-size:13.5px;color:#FFB4B4">{{ errs.email }}</span></sc-if>
+        </div>
+        <fieldset style="margin:0;padding:0;border:0;display:grid;gap:10px">
+          <legend style="padding:0;margin-bottom:10px;font-size:14px;font-weight:700">¿Qué necesitás? <span style="font-weight:500;color:#93A2C0">(obligatorio)</span></legend>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <sc-for list="{{ needOpts }}" as="o" hint-placeholder-count="5">
+              <button type="button" aria-pressed="{{ o.on }}" onClick="{{ o.pick }}" style="padding:10px 14px;border-radius:999px;border:1px solid {{ o.bd }};background:{{ o.bg }};color:#E9EEFB;font-size:14px;font-weight:600;cursor:pointer">{{ o.t }}</button>
+            </sc-for>
+          </div>
+          <sc-if value="{{ errs.need }}" hint-placeholder-val="{{ false }}"><span style="font-size:13.5px;color:#FFB4B4">{{ errs.need }}</span></sc-if>
+        </fieldset>
+        <div style="display:grid;gap:7px">
+          <label for="f-offer" style="font-size:14px;font-weight:700">Contanos sobre tu empresa y el proyecto <span style="font-weight:500;color:#93A2C0">(obligatorio)</span></label>
+          <textarea id="f-offer" rows="3" maxlength="1000" value="{{ f.offer }}" onChange="{{ onOffer }}" aria-invalid="{{ inv.offer }}" aria-describedby="e-offer" placeholder="Qué venden, a quién, y qué esperás de la web." style="padding:12px 14px;border-radius:10px;border:1px solid {{ bc.offer }};background:rgba(4,8,18,.6);color:#E9EEFB;font-size:16px;line-height:1.5;resize:vertical;outline:none" style-focus="border-color:#5C93FF;box-shadow:0 0 0 3px rgba(92,147,255,.3)"></textarea>
+          <sc-if value="{{ errs.offer }}" hint-placeholder-val="{{ false }}"><span id="e-offer" style="font-size:13.5px;color:#FFB4B4">{{ errs.offer }}</span></sc-if>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:18px">
+          <div style="display:grid;gap:7px">
+            <label for="f-website" style="font-size:14px;font-weight:700">Web actual <span style="font-weight:500;color:#93A2C0">(opcional)</span></label>
+            <input id="f-website" type="text" inputMode="url" autocomplete="url" maxlength="200" placeholder="tuempresa.com" value="{{ f.website }}" onChange="{{ onWebsite }}" aria-invalid="{{ inv.website }}" aria-describedby="e-website" style="height:48px;padding:0 14px;border-radius:10px;border:1px solid {{ bc.website }};background:rgba(4,8,18,.6);color:#E9EEFB;font-size:16px;outline:none" style-focus="border-color:#5C93FF;box-shadow:0 0 0 3px rgba(92,147,255,.3)">
+            <sc-if value="{{ errs.website }}" hint-placeholder-val="{{ false }}"><span id="e-website" style="font-size:13.5px;color:#FFB4B4">{{ errs.website }}</span></sc-if>
+          </div>
+          <div style="display:grid;gap:7px">
+            <label for="f-whatsapp" style="font-size:14px;font-weight:700">WhatsApp <span style="font-weight:500;color:#93A2C0">(opcional)</span></label>
+            <input id="f-whatsapp" type="tel" inputMode="tel" autocomplete="tel" maxlength="30" placeholder="+54 9 11 1234 5678" value="{{ f.whatsapp }}" onChange="{{ onWhatsapp }}" aria-invalid="{{ inv.whatsapp }}" aria-describedby="e-whatsapp" style="height:48px;padding:0 14px;border-radius:10px;border:1px solid {{ bc.whatsapp }};background:rgba(4,8,18,.6);color:#E9EEFB;font-size:16px;outline:none" style-focus="border-color:#5C93FF;box-shadow:0 0 0 3px rgba(92,147,255,.3)">
+            <sc-if value="{{ errs.whatsapp }}" hint-placeholder-val="{{ false }}"><span id="e-whatsapp" style="font-size:13.5px;color:#FFB4B4">{{ errs.whatsapp }}</span></sc-if>
+          </div>
+        </div>
+        <div role="alert" aria-live="assertive" style="display:grid">
+          <sc-if value="{{ isError }}" hint-placeholder-val="{{ false }}"><div style="padding:14px 16px;border-radius:10px;background:rgba(255,90,90,.1);border:1px solid rgba(255,110,110,.35);color:#FFC9C9;font-size:14.5px;line-height:1.55">No pudimos enviar tu consulta. Tus datos siguen en el formulario. También podés <a href="{{ whatsappUrl }}" target="_blank" rel="noopener" style="color:#FFE1E1;text-decoration:underline">escribirnos por WhatsApp</a>.</div></sc-if>
+        </div>
+        <button type="submit" aria-disabled="{{ sending }}" style="height:54px;border:0;border-radius:10px;background:linear-gradient(135deg,#6A5BFF,#256BFF);color:#fff;font-size:16px;font-weight:700;cursor:pointer;box-shadow:0 14px 36px rgba(70,90,255,.38)">{{ submitLabel }}</button>
+        <p style="margin:0;font-size:13.5px;line-height:1.55;color:#AFBDD8;text-align:center">Usaremos estos datos solo para responder tu consulta. <a href="../privacidad/" style="text-decoration:underline">Política de privacidad</a>.</p>
+      </form>
+      <div style="display:grid;gap:8px;justify-items:center;margin-top:20px;padding-top:18px;border-top:1px solid rgba(140,170,255,.14);font-size:14.5px;color:#C6D5F2;text-align:center">
+        <span>¿Preferís WhatsApp? <a href="{{ whatsappUrl }}" target="_blank" rel="noopener" onClick="{{ waClick }}" style="font-weight:600">Escribinos</a></span>
+        <span>¿Preferís hablar? <a href="https://calendly.com/contact-suprads/30min" target="_blank" rel="noopener" onClick="{{ bookingClick }}" style="font-weight:600">Reservá una llamada ↗</a></span>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <a href="{{ whatsappUrl }}" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp" onClick="{{ waFloatClick }}" style="position:fixed;right:clamp(16px,2.5vw,28px);bottom:clamp(16px,2.5vw,28px);z-index:950;display:flex;align-items:center;justify-content:center;width:60px;height:60px;border-radius:50%;background:#25D366;box-shadow:0 12px 32px rgba(0,0,0,.45);transition:transform .2s ease" style-hover="transform:scale(1.06)"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><path fill="#fff" d="M16.04 4C9.4 4 4 9.38 4 16c0 2.12.56 4.18 1.62 6L4 28l6.2-1.6A12 12 0 0 0 16.04 28C22.66 28 28 22.62 28 16S22.66 4 16.04 4Zm0 21.8c-1.84 0-3.64-.5-5.2-1.44l-.37-.22-3.68.95.98-3.58-.24-.38A9.75 9.75 0 0 1 6.2 16c0-5.42 4.42-9.82 9.84-9.82 5.42 0 9.82 4.4 9.82 9.82 0 5.42-4.4 9.8-9.82 9.8Zm5.38-7.34c-.3-.15-1.74-.86-2.01-.96-.27-.1-.47-.15-.66.15-.2.3-.76.96-.93 1.15-.17.2-.34.22-.64.07-.3-.15-1.24-.46-2.37-1.46-.88-.78-1.47-1.75-1.64-2.04-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.66-1.6-.91-2.18-.24-.58-.48-.5-.66-.5h-.56c-.2 0-.52.07-.79.37-.27.3-1.03 1-1.03 2.45s1.06 2.84 1.2 3.04c.15.2 2.08 3.17 5.04 4.45.7.3 1.25.48 1.68.62.7.23 1.35.2 1.86.12.57-.08 1.74-.71 1.99-1.4.25-.7.25-1.28.17-1.4-.07-.13-.27-.2-.57-.35Z"></path></svg></a>
+
+
+  <sc-if value="{{ hasPreview }}" hint-placeholder-val="{{ false }}">
+    <div role="dialog" aria-modal="true" aria-label="{{ pv.label }}" onClick="{{ closePreview }}" style="position:fixed;inset:0;z-index:1200;display:flex;align-items:center;justify-content:center;padding:clamp(10px,3vw,40px);background:rgba(3,6,14,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)">
+      <div onClick="{{ stop }}" style="display:flex;flex-direction:column;width:{{ pv.w }};max-width:100%;height:min(88vh,900px);border-radius:18px;overflow:hidden;border:1px solid rgba(127,166,255,.35);background:#070E1F;box-shadow:0 0 80px rgba(47,107,255,.3),0 40px 100px rgba(0,0,0,.6);transition:width .45s cubic-bezier(.2,.8,.2,1)">
+        <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-bottom:1px solid rgba(140,170,255,.14)">
+          <div aria-hidden="true" style="display:flex;gap:6px"><span style="width:10px;height:10px;border-radius:50%;background:#1E2B4D"></span><span style="width:10px;height:10px;border-radius:50%;background:#1E2B4D"></span><span style="width:10px;height:10px;border-radius:50%;background:#1E2B4D"></span></div>
+          <div style="flex:1;min-width:0;padding:7px 14px;border-radius:999px;background:#060B18;border:1px solid rgba(140,170,255,.14);font-size:12.5px;color:#AFBDD8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center">{{ pv.host }}</div>
+          <div role="group" aria-label="Tamaño de vista" style="display:flex;gap:2px;padding:3px;border-radius:999px;border:1px solid rgba(140,170,255,.18)">
+            <button type="button" onClick="{{ setDesk }}" aria-pressed="{{ pv.deskOn }}" aria-label="Vista escritorio" style="display:grid;place-items:center;width:34px;height:30px;border:0;border-radius:999px;background:{{ pv.deskBg }};color:#E9EEFB;cursor:pointer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M8 20h8M12 16v4"></path></svg></button>
+            <button type="button" onClick="{{ setMob }}" aria-pressed="{{ pv.mobOn }}" aria-label="Vista celular" style="display:grid;place-items:center;width:34px;height:30px;border:0;border-radius:999px;background:{{ pv.mobBg }};color:#E9EEFB;cursor:pointer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2"></rect><path d="M11 18h2"></path></svg></button>
+          </div>
+          <a href="{{ pv.url }}" target="_blank" rel="noopener" aria-label="Abrir en una pestaña nueva" style="display:grid;place-items:center;width:34px;height:34px;border-radius:50%;border:1px solid rgba(140,170,255,.22);color:#AEC6FF" style-hover="color:#fff;border-color:rgba(174,198,255,.6)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"></path></svg></a>
+          <button type="button" onClick="{{ closePreview }}" aria-label="Cerrar" data-pv-close="1" style="display:grid;place-items:center;width:34px;height:34px;border-radius:50%;border:1px solid rgba(140,170,255,.22);background:transparent;color:#E9EEFB;cursor:pointer"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+        </div>
+        <div style="position:relative;flex:1;min-height:0;background:#fff">
+          <div style="position:absolute;inset:0;display:grid;place-items:center;gap:14px;align-content:center;background:#070E1F;text-align:center;padding:24px">
+            <span style="font-size:14.5px;color:#AFBDD8">Cargando {{ pv.host }}…</span>
+            <span style="font-size:13px;color:#7E8DAC">Si no aparece, <a href="{{ pv.url }}" target="_blank" rel="noopener" style="text-decoration:underline">abrila en una pestaña nueva</a>.</span>
+          </div>
+          <iframe src="{{ pv.url }}" title="{{ pv.label }}" loading="eager" referrerpolicy="no-referrer-when-downgrade" style="position:relative;display:block;width:100%;height:100%;border:0;background:transparent"></iframe>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+  <footer style="padding:clamp(40px,7vh,64px) clamp(16px,3vw,28px) 28px;background:#050914;border-top:1px solid rgba(140,170,255,.10)">
+    <div style="max-width:1160px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px 40px;align-items:flex-start">
+      <div>
+        <a href="../" aria-label="Suprads, ir al inicio"><img src="../assets/logo-wordmark-white.png" alt="Suprads" width="122" height="20" style="height:20px;width:auto;display:block"></a>
+        <p style="margin:12px 0 0;font-size:14px;line-height:1.6;color:#8C9CBB">Suprads S.R.L. · Santa Fe, Argentina.</p>
+      </div>
+      <nav aria-label="Pie de página" style="display:flex;flex-wrap:wrap;gap:12px 24px;font-size:14px">
+        <a href="../" style="color:#AFBDD8">Inicio</a>
+        <a href="../webads/" style="color:#AFBDD8">Web y Google Ads</a>
+        <a href="#presupuesto" style="color:#AFBDD8">Pedir presupuesto</a>
+        <a href="../privacidad/" style="color:#AFBDD8">Privacidad</a>
+      </nav>
+    </div>
+    <div style="max-width:1160px;margin:24px auto 0;padding-top:18px;border-top:1px solid rgba(140,170,255,.10);font-size:12.5px;color:#6C7C9C">© 2026 Suprads S.R.L.</div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;endpointMode&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;supabase&quot;,&quot;mock-success&quot;,&quot;mock-error&quot;],&quot;default&quot;:&quot;supabase&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Pruebas&quot;}}">
+const SB_URL = 'https://sqfwoyqwbpuwopynnfvi.supabase.co';
+const SB_KEY = 'sb_publishable_ekjVaDRXt-TKSRXZlLELbw_keeivRTB';
+const FORM_KEY = 'sup_web_form';
+const FT_KEY = 'sup_b2b_first_touch';
+const ATTR = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'gbraid', 'wbraid'];
+const EMPTY = { name: '', company: '', email: '', offer: '', website: '', whatsapp: '', need: '', hp: '' };
+const WA = 'https://wa.me/5491162040820?text=' + encodeURIComponent('Hola, vengo desde la web de Suprads (Desarrollo web) y me gustaría pedir un presupuesto.');
+const LOGOS = [{ t: 'ITZA', s: 'itza' }, { t: 'PLASTIFLEX', s: 'plastiflex' }, { t: 'SKAL', s: 'skal' }, { t: 'Hankar', s: 'hankar' }, { t: 'INDELTEC', s: 'indeltec' }, { t: 'Grupo UP', s: 'grupo-up' }, { t: 'AG LIFT', s: 'ag-lift' }, { t: 'Mountain Store', s: 'mountain-store' }];
+const NEEDS = ['Web nueva', 'Rediseño', 'Tienda online', 'Desarrollo a medida', 'No estoy seguro'];
+const SERVICES = [
+  { t: 'Webs corporativas', d: 'Sitios que presentan tu empresa, tus servicios y tus rubros con un camino claro al presupuesto.' },
+  { t: 'Rediseño web', d: 'Renovamos tu web actual: estructura, mensajes, diseño y velocidad, aprovechando lo que ya funciona.' },
+  { t: 'WordPress y WooCommerce', d: 'Webs administrables y tiendas online para que tu equipo actualice contenidos y productos.' },
+  { t: 'Desarrollo a medida', d: 'Funcionalidades específicas en código cuando una plantilla o un plugin no alcanzan.' },
+  { t: 'Diseño UX/UI', d: 'Arquitectura de contenidos y diseño de interfaz pensados en cómo decide y consulta tu cliente.' },
+  { t: 'Automatizaciones e integraciones', d: 'Formularios conectados a tu CRM, hojas de cálculo, email o sistemas internos vía API.' }
+].map((s, i) => Object.assign({ n: '0' + (i + 1) }, s));
+const INCLUDES = ['Diseño adaptado a celular, tablet y escritorio', 'Optimización de velocidad de carga', 'Formularios y botón de WhatsApp conectados', 'Estructura preparada para SEO técnico básico', 'Base lista para medir consultas', 'Capacitación para actualizar contenidos'];
+const STEPS = [
+  { t: 'Diagnóstico', d: 'Revisamos tu negocio, tu web actual si la tenés y qué tiene que lograr el sitio.' },
+  { t: 'Propuesta y alcance', d: 'Te enviamos por escrito páginas, funcionalidades, etapas, plazos y costos.' },
+  { t: 'Diseño y desarrollo', d: 'Diseñamos, validamos con vos y desarrollamos con las revisiones acordadas.' },
+  { t: 'Publicación y ajustes', d: 'Publicamos, probamos formularios y medición, y te dejamos la web funcionando.' }
+].map((s, i) => Object.assign({ n: '0' + (i + 1) }, s));
+const FAQS = [
+  { q: '¿Cuánto cuesta una web?', a: 'Depende de la cantidad de páginas, funcionalidades e integraciones. Después de una primera conversación te enviamos una propuesta con alcance y costos detallados.' },
+  { q: '¿Cuánto tarda el desarrollo?', a: 'El plazo depende del alcance y de la entrega de contenidos. Lo definimos por etapas en la propuesta, antes de empezar.' },
+  { q: '¿Pueden rediseñar mi web actual?', a: 'Sí. Revisamos lo que tenés y te proponemos qué conviene mantener, mejorar o rehacer.' },
+  { q: '¿Voy a poder editar la web?', a: 'Si el proyecto es en WordPress, sí. Te capacitamos para actualizar textos, imágenes y productos. En desarrollos a medida definimos juntos qué partes serán editables.' },
+  { q: '¿De quién es la web y el dominio?', a: 'El dominio queda a nombre de tu empresa. Las condiciones de entrega del sitio y los accesos se detallan en la propuesta.' },
+  { q: '¿Cómo se paga?', a: 'Los desarrollos se abonan por adelantado según los anticipos e hitos definidos en la propuesta.' },
+  { q: '¿También hacen Google Ads?', a: 'Sí, como servicio opcional. Si querés atraer consultas desde búsquedas, podemos sumar campañas y medición.' }
+];
+const dup = (arr) => arr.map(t => ({ t, dup: 'false' })).concat(arr.map(t => ({ t, dup: 'true' })));
+const track = (event, params) => {
+  const p = Object.assign({ page_type: 'desarrollo_web' }, params || {});
+  if (typeof window.gtag === 'function') window.gtag('event', event, p);
+  else { window.dataLayer = window.dataLayer || []; window.dataLayer.push(Object.assign({ event }, p)); }
+};
+const uuid = () => (window.crypto && crypto.randomUUID) ? crypto.randomUUID() : 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => { const r = Math.random() * 16 | 0; return (c === 'x' ? r : (r & 3 | 8)).toString(16); });
+const clean = (v, n) => String(v == null ? '' : v).replace(/[\u0000-\u001F]/g, ' ').trim().slice(0, n);
+const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+const normalizeUrl = (raw) => {
+  const v = raw.trim(); if (!v) return { ok: true, value: null };
+  try { const u = new URL(/^https?:\/\//i.test(v) ? v : 'https://' + v); if (!u.hostname.includes('.')) return { ok: false }; return { ok: true, value: (u.origin + u.pathname).replace(/\/$/, '').slice(0, 200) }; } catch (e) { return { ok: false }; }
+};
+const readTouch = () => {
+  const q = new URLSearchParams(window.location.search), t = {};
+  ATTR.forEach(k => { const v = q.get(k); if (v) t[k] = clean(v, 150); });
+  try { if (document.referrer) { const u = new URL(document.referrer); if (u.origin !== window.location.origin) t.referrer_origin = u.origin; } } catch (e) {}
+  return Object.keys(t).length ? Object.assign(t, { at: new Date().toISOString() }) : null;
+};
+
+class Component extends DCLogic {
+  state = { f: Object.assign({}, EMPTY), errs: {}, status: 'idle', started: false, reqId: null, pv: null, pvMode: 'desk' };
+
+  openPreview(p) {
+    this._lastFocus = document.activeElement;
+    document.documentElement.style.overflow = 'hidden'; document.body.style.overflow = 'hidden';
+    this.setState({ pv: p, pvMode: window.innerWidth < 700 ? 'mob' : 'desk' });
+    track('portfolio_preview', { project: p.n });
+    setTimeout(() => { const b = document.querySelector('[data-pv-close]'); if (b) b.focus(); }, 60);
+  }
+  closePreview = () => {
+    document.documentElement.style.overflow = ''; document.body.style.overflow = '';
+    this.setState({ pv: null });
+    if (this._lastFocus && this._lastFocus.focus) this._lastFocus.focus();
+  };
+
+  watch(el, cb) {
+    if (!el) return;
+    if (!('IntersectionObserver' in window)) { cb(true); return; }
+    const io = new IntersectionObserver(es => cb(es[0].isIntersecting), { rootMargin: '80px 0px' });
+    io.observe(el); this._ios.push(io);
+  }
+
+  initMarquee(t, SPEED) {
+    if (!t || t.dataset.ready) return; t.dataset.ready = '1';
+    let x = 0, last = performance.now(), drag = false, hover = false, sx = 0, vel = 0, lx = 0, lt = 0, moved = false, vis = true;
+    this.watch(t, v => { vis = v; });
+    const half = () => (t.scrollWidth + (parseFloat(getComputedStyle(t).columnGap) || 0)) / 2;
+    const wrap = () => { const h = half(); if (!h) return; while (x <= -h) x += h; while (x > 0) x -= h; };
+    const tick = now => {
+      if (!this._alive) return;
+      const dt = Math.min((now - last) / 1000, .05); last = now;
+      if (vis) {
+        if (!drag) { if (Math.abs(vel) > 5) { x += vel * dt; vel *= Math.pow(.04, dt); } else if (!hover) x -= SPEED * dt; }
+        wrap(); t.style.transform = 'translate3d(' + x + 'px,0,0)';
+      }
+      requestAnimationFrame(tick);
+    };
+    t.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') hover = true; });
+    t.addEventListener('pointerleave', () => { hover = false; });
+    t.addEventListener('pointerdown', e => { drag = true; moved = false; vel = 0; sx = lx = e.clientX; lt = performance.now(); t.style.cursor = 'grabbing'; t.setPointerCapture && t.setPointerCapture(e.pointerId); });
+    t.addEventListener('pointermove', e => {
+      if (!drag) return; const dx = e.clientX - sx; if (Math.abs(dx) > 4) moved = true; x += dx; sx = e.clientX;
+      const now = performance.now(), d = now - lt; if (d > 0) { vel = (e.clientX - lx) / d * 1000; lx = e.clientX; lt = now; } wrap();
+    });
+    const end = () => { if (!drag) return; drag = false; t.style.cursor = 'grab'; if (performance.now() - lt > 80) vel = 0; };
+    t.addEventListener('pointerup', end); t.addEventListener('pointercancel', end);
+    t.addEventListener('click', e => { if (moved) { e.preventDefault(); e.stopPropagation(); } }, true);
+    t.addEventListener('dragstart', e => e.preventDefault());
+    requestAnimationFrame(tick);
+  }
+
+  initReveal() {
+    if (!('IntersectionObserver' in window)) return;
+    const vh = window.innerHeight, cand = [].slice.call(document.querySelectorAll('[data-rv]'));
+    const tops = cand.map(el => el.getBoundingClientRect().top), els = [];
+    cand.forEach((el, i) => { if (tops[i] > vh * 0.9) { el.classList.add('rv'); els.push(el); } });
+    const ob = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); ob.unobserve(en.target); } }), { rootMargin: '0px 0px -6% 0px' });
+    els.forEach(el => ob.observe(el)); this._ios.push(ob);
+  }
+
+  initSpot() {
+    let cur = null;
+    this._onMove = e => {
+      const el = e.target && e.target.closest ? e.target.closest('[data-spot]') : null;
+      if (cur && cur !== el) { cur.style.setProperty('--mx', '-400px'); cur.style.setProperty('--my', '-400px'); }
+      cur = el; if (!el) return;
+      const r = el.getBoundingClientRect();
+      el.style.setProperty('--mx', (e.clientX - r.left) + 'px'); el.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    };
+    document.addEventListener('pointermove', this._onMove, { passive: true });
+  }
+
+  initBA() {
+    const box = document.querySelector('[data-ba]'); if (!box) return;
+    const top = box.querySelector('[data-ba-top]'), h = box.querySelector('[data-ba-handle]');
+    let p = 50, drag = false;
+    const set = v => { p = Math.max(3, Math.min(97, v)); top.style.clipPath = 'inset(0 ' + (100 - p) + '% 0 0)'; h.style.left = p + '%'; h.setAttribute('aria-valuenow', Math.round(p)); };
+    const fromE = e => { const r = box.getBoundingClientRect(); set((e.clientX - r.left) / r.width * 100); };
+    box.addEventListener('pointerdown', e => { drag = true; box.setPointerCapture && box.setPointerCapture(e.pointerId); fromE(e); });
+    box.addEventListener('pointermove', e => { if (drag) fromE(e); });
+    box.addEventListener('pointerup', () => { drag = false; }); box.addEventListener('pointercancel', () => { drag = false; });
+    h.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') { set(p - 5); e.preventDefault(); } if (e.key === 'ArrowRight') { set(p + 5); e.preventDefault(); } });
+    let hinted = false;
+    this.watch(box, async v => {
+      if (!v || hinted) return; hinted = true; await sleep(500);
+      for (const f of [50, 58, 66, 72, 68, 60, 52, 44, 38, 42, 47, 50]) { if (drag || !this._alive) return; set(f); await sleep(70); }
+    });
+    set(50);
+  }
+
+  initSteps() {
+    const box = document.querySelector('[data-steps]'); if (!box) return;
+    const track = box.querySelector('[data-steps-track]'), fill = box.querySelector('[data-steps-fill]');
+    let queued = false;
+    const upd = () => {
+      queued = false;
+      const dots = [].slice.call(box.querySelectorAll('[data-step-dot]')); if (!dots.length) return;
+      const br = box.getBoundingClientRect();
+      const cs = dots.map(d => { const r = d.getBoundingClientRect(); return r.top + r.height / 2; });
+      const first = cs[0], last = cs[cs.length - 1], len = Math.max(1, last - first);
+      track.style.top = (first - br.top) + 'px'; track.style.height = len + 'px';
+      const mid = window.innerHeight * 0.6;
+      const p = Math.max(0, Math.min(1, (mid - first) / len));
+      fill.style.height = (p * 100) + '%';
+      const reach = first + p * len;
+      dots.forEach((d, i) => {
+        const on = cs[i] <= reach + 1, cur = on && (i === cs.length - 1 || cs[i + 1] > reach + 1);
+        d.style.background = on ? 'linear-gradient(135deg,#6A5BFF,#256BFF)' : '#0B1530';
+        d.style.borderColor = on ? 'rgba(174,198,255,.6)' : 'rgba(140,170,255,.25)';
+        d.style.color = on ? '#fff' : '#7FA6FF';
+        d.style.transform = cur ? 'scale(1.12)' : 'scale(1)';
+        d.style.boxShadow = cur ? '0 0 0 7px rgba(92,147,255,.18),0 0 30px rgba(92,147,255,.65)' : on ? '0 0 16px rgba(92,147,255,.35)' : 'none';
+        const li = d.parentElement; li.style.opacity = on ? '1' : '.5'; li.style.transition = 'opacity .45s';
+      });
+    };
+    this._onScroll = () => { if (!queued) { queued = true; requestAnimationFrame(upd); } };
+    document.addEventListener('scroll', this._onScroll, { passive: true, capture: true });
+    window.addEventListener('resize', this._onScroll, { passive: true });
+    upd(); setTimeout(upd, 600);
+  }
+
+  componentDidMount() {
+    this._alive = true; this._ios = [];
+    this._onKey = e => { if (e.key === 'Escape' && this.state.pv) this.closePreview(); };
+    document.addEventListener('keydown', this._onKey);
+    requestAnimationFrame(() => { this.initReveal(); this.initMarquee(document.querySelector('[data-logos-track]'), 40); this.initSpot(); this.initBA(); this.initSteps(); });
+    try { const saved = JSON.parse(sessionStorage.getItem(FORM_KEY) || 'null'); if (saved) this.setState({ f: Object.assign({}, EMPTY, saved, { hp: '' }) }); } catch (e) {}
+    const now = readTouch();
+    try {
+      if (now) sessionStorage.setItem('sup_b2b_current_touch', JSON.stringify(now));
+      const ft = JSON.parse(localStorage.getItem(FT_KEY) || 'null');
+      if (now && (!ft || Date.now() - new Date(ft.at).getTime() > 90 * 864e5)) localStorage.setItem(FT_KEY, JSON.stringify(now));
+    } catch (e) {}
+  }
+
+  componentWillUnmount() {
+    this._alive = false; (this._ios || []).forEach(io => io.disconnect());
+    if (this._onKey) document.removeEventListener('keydown', this._onKey);
+    if (this._onMove) document.removeEventListener('pointermove', this._onMove);
+    if (this._onScroll) { document.removeEventListener('scroll', this._onScroll, { capture: true }); window.removeEventListener('resize', this._onScroll); }
+  }
+
+  update(k, v) {
+    const f = Object.assign({}, this.state.f, { [k]: v });
+    const errs = Object.assign({}, this.state.errs); delete errs[k];
+    this.setState({ f, errs, status: this.state.status === 'error' ? 'idle' : this.state.status });
+    const { hp, ...persist } = f; try { sessionStorage.setItem(FORM_KEY, JSON.stringify(persist)); } catch (e) {}
+  }
+  setField = (k) => (e) => this.update(k, e.target.value);
+
+  validate(f) {
+    const e = {};
+    if (clean(f.name, 200).length < 2) e.name = 'Ingresá tu nombre.';
+    if (clean(f.company, 200).length < 2) e.company = 'Ingresá el nombre de tu empresa.';
+    const em = clean(f.email, 300);
+    if (!em) e.email = 'Ingresá un email de contacto.';
+    else if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)) e.email = 'Revisá el formato del email. Ejemplo: nombre@empresa.com';
+    if (!f.need) e.need = 'Elegí una opción.';
+    if (clean(f.offer, 2000).length < 5) e.offer = 'Contanos brevemente sobre tu empresa y el proyecto.';
+    if (!normalizeUrl(f.website).ok) e.website = 'Revisá la dirección. Ejemplo: tuempresa.com';
+    const wa = f.whatsapp.trim(); if (wa && !/^\+?[\d\s\-().]{6,25}$/.test(wa)) e.whatsapp = 'Usá solo números. Ejemplo: +54 9 11 1234 5678';
+    return e;
+  }
+
+  submit = async (ev) => {
+    ev.preventDefault();
+    if (this.state.status === 'sending') return;
+    const f = this.state.f, errs = this.validate(f);
+    if (Object.keys(errs).length) {
+      this.setState({ errs, status: 'idle' });
+      track('form_error', { form_id: 'presupuesto_web', error_code: 'validation' });
+      const first = ['name', 'company', 'email', 'need', 'offer', 'website', 'whatsapp'].find(k => errs[k]);
+      setTimeout(() => { const el = document.getElementById('f-' + first); if (el) el.focus(); }, 30);
+      return;
+    }
+    if (f.hp) { this.setState({ status: 'error' }); return; }
+    const reqId = this.state.reqId || uuid();
+    this.setState({ status: 'sending', reqId });
+    let ft = null, ct = null;
+    try { ft = JSON.parse(localStorage.getItem(FT_KEY) || 'null'); ct = JSON.parse(sessionStorage.getItem('sup_b2b_current_touch') || 'null'); } catch (e) {}
+    const body = {
+      request_id: reqId, name: clean(f.name, 120), company: clean(f.company, 160), email: clean(f.email, 200).toLowerCase(),
+      offer: ('[' + f.need + '] ' + clean(f.offer, 980)).slice(0, 1000), website: normalizeUrl(f.website).value, whatsapp: clean(f.whatsapp, 30) || null,
+      page_path: window.location.pathname.slice(0, 200), referrer_origin: (ct && ct.referrer_origin) || null, first_touch: ft, current_touch: ct
+    };
+    const mode = this.props.endpointMode || 'supabase';
+    let ok = false;
+    try {
+      if (mode === 'mock-success') { await sleep(600); ok = true; }
+      else if (mode === 'mock-error') { await sleep(600); }
+      else {
+        const ctrl = new AbortController(), to = setTimeout(() => ctrl.abort(), 15000);
+        const res = await fetch(SB_URL + '/rest/v1/leads_b2b', { method: 'POST', signal: ctrl.signal, headers: { 'Content-Type': 'application/json', apikey: SB_KEY, Prefer: 'return=minimal' }, body: JSON.stringify(body) });
+        clearTimeout(to); ok = res.status === 201 || res.status === 204 || res.status === 409;
+      }
+    } catch (e) {}
+    if (ok) {
+      track('generate_lead', { form_id: 'presupuesto_web', need: f.need });
+      try { sessionStorage.removeItem(FORM_KEY); sessionStorage.setItem('sup_lead_ok', reqId); } catch (e) {}
+      window.location.href = '../gracias/?origen=desarrollo-web';
+    } else {
+      track('form_error', { form_id: 'presupuesto_web', error_code: 'send' });
+      this.setState({ status: 'error' });
+    }
+  };
+
+  renderVals() {
+    const s = this.state, keys = ['name', 'company', 'email', 'offer', 'website', 'whatsapp'], inv = {}, bc = {};
+    keys.forEach(k => { inv[k] = s.errs[k] ? 'true' : 'false'; bc[k] = s.errs[k] ? 'rgba(255,120,120,.75)' : 'rgba(140,170,255,.22)'; });
+    const cta = (position) => () => track('cta_click', { position });
+    return {
+      logos: LOGOS.map(l => ({ t: l.t, src: '../assets/clientes/' + l.s + '.png', dup: 'false' })).concat(LOGOS.map(l => ({ t: l.t, src: '../assets/clientes/' + l.s + '.png', dup: 'true' }))), services: SERVICES, projects: this._projects || (this._projects = [
+        { n: 'SKAL', d: 'Desarrollos inmobiliarios · Web corporativa', img: '../assets/proyecto-skal.webp', url: 'https://skaldesarrollos.com.ar/', alt: 'Web de SKAL Desarrollos Inmobiliarios' },
+        { n: 'Hankar', d: 'Repuestos industriales · Web corporativa', img: '../assets/proyecto-hankar.webp', url: 'https://www.hankar.com.ar/', alt: 'Web de Hankar, repuestos para autoelevadores' },
+        { n: 'Trébol Seguridad', d: 'Seguridad privada · Web corporativa', img: '../assets/proyecto-trebol.webp', url: 'https://trebol-seguridad.com/', alt: 'Web de Trébol Seguridad' },
+        { n: 'Premedic', d: 'Medicina privada · Web comercial', img: '../assets/proyecto-premedic.webp', url: 'https://medicinaprivadapremedic.com.ar/', alt: 'Web de Premedic, medicina privada' },
+        { n: 'Crisol', d: 'Proveedor de laboratorios · Web con catálogo', img: '../assets/proyecto-crisol.webp', url: 'https://www.laboratorioscrisol.com.ar/', alt: 'Web de Laboratorios Crisol' },
+        { n: 'Yael G', d: 'Joyería y accesorios · Tienda online', img: '../assets/proyecto-yaelg.webp', url: 'https://www.yaelgaccesorios.com.ar/', alt: 'Tienda online de Yael G accesorios' }
+      ].map(p => Object.assign(p, { open: () => this.openPreview(p) }))),
+      hasPreview: !!s.pv,
+      pv: s.pv ? { url: s.pv.url, label: 'Web de ' + s.pv.n, host: s.pv.url.replace(/^https?:\/\//, '').replace(/\/$/, ''), w: s.pvMode === 'mob' ? '400px' : '1280px', deskOn: s.pvMode === 'desk' ? 'true' : 'false', mobOn: s.pvMode === 'mob' ? 'true' : 'false', deskBg: s.pvMode === 'desk' ? 'rgba(92,147,255,.3)' : 'transparent', mobBg: s.pvMode === 'mob' ? 'rgba(92,147,255,.3)' : 'transparent' } : { url: '', label: '', host: '', w: '1280px', deskOn: 'true', mobOn: 'false', deskBg: 'transparent', mobBg: 'transparent' },
+      closePreview: this.closePreview, stop: e => e.stopPropagation(),
+      setDesk: () => this.setState({ pvMode: 'desk' }), setMob: () => this.setState({ pvMode: 'mob' }), includes: INCLUDES, steps: STEPS, testimonials: [1, 2, 3], faqs: FAQS,
+      needOpts: NEEDS.map(t => { const on = s.f.need === t; return { t, on: on ? 'true' : 'false', bd: on ? 'rgba(174,198,255,.8)' : 'rgba(140,170,255,.22)', bg: on ? 'rgba(92,147,255,.28)' : 'rgba(4,8,18,.6)', pick: () => this.update('need', t) }; }),
+      f: s.f, errs: s.errs, inv, bc, isError: s.status === 'error',
+      sending: s.status === 'sending' ? 'true' : 'false', submitLabel: s.status === 'sending' ? 'Enviando…' : 'Pedir presupuesto',
+      whatsappUrl: WA,
+      onName: this.setField('name'), onCompany: this.setField('company'), onEmail: this.setField('email'), onOffer: this.setField('offer'),
+      onWebsite: this.setField('website'), onWhatsapp: this.setField('whatsapp'), onHp: this.setField('hp'), onSubmit: this.submit,
+      onFormFocus: () => { if (!s.started) { this.setState({ started: true }); track('form_start', { form_id: 'presupuesto_web' }); } },
+      ctaHeader: cta('header'), ctaHero: cta('hero'),
+      waClick: () => track('whatsapp_click', { position: 'formulario' }), waFloatClick: () => track('whatsapp_click', { position: 'flotante' }),
+      bookingClick: () => track('booking_click', { position: 'formulario' })
+    };
+  }
+}
+</script>
+</body>
+</html>
